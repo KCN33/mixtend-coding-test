@@ -8,7 +8,7 @@
 <body>
 <div id="app">
     <calendar
-        :args="{{ $args }}"
+        :args="{{ json_encode($args) }}"
     ></calendar>
 </div>
 <script src="{{ mix('/js/calendar.js') }}"></script>
