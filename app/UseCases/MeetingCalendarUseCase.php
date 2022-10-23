@@ -24,8 +24,12 @@ class MeetingCalendarUseCase
 
         $working_hours_int = collect()->range((int)$working_start->format('H'), (int)$working_end->format("H"))->all();
         $working_hours = collect();
+
+        $minutes = ['00', '10', '20', '30', '40', '50'];
         foreach ($working_hours_int as $hour) {
-            $working_hours = $working_hours->concat([(string)$hour . ":00"]);
+            foreach ($minutes as $m) {
+                $working_hours = $working_hours->concat([(string)$hour . ":" . $m]);
+            }
         }
 
         $meeting_days = array_keys($data_array['meetings']);
