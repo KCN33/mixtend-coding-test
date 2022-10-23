@@ -15,7 +15,10 @@ class MeetingCalendarUseCase
         ];
         $context = stream_context_create($options);
         $data = file_get_contents($url, false, $context);
+        $dataArray = json_decode($data, true);
 
+        // dd($dataArray);
+        // return collect($dataArray);
         return $data;
     }
 }

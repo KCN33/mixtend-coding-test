@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>meeting</title>
+    <meta charset="UTF-8">
+    <title>meeting</title>
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-  <p>{{ $args }}</p>
+<div id="app">
+    <calendar
+        :args="{{ $args }}"
+    ></calendar>
+</div>
+<script src="{{ mix('/js/calendar.js') }}"></script>
 </body>
 </html>
