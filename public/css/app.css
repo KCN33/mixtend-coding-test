@@ -10821,3 +10821,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.meeting {
+  color: #fff;
+  background-color: darkcyan;
+}
+
+table th {
+  height: 50px;
+}
